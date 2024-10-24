@@ -32,3 +32,15 @@ resource "aws_cognito_user_pool_ui_customization" "default_ui_customization" {
   image_file = local.default_ui_customization.image_file
   user_pool_id = aws_cognito_user_pool.pool[0].id
 }
+
+output "default_ui_customization_image_file" {
+  value = var.default_ui_customization_image_file
+}
+
+output "client_ui_customizations" {
+  value = local.client_ui_customizations
+}
+
+output "default_ui_customization" {
+  value = local.default_ui_customization
+}
