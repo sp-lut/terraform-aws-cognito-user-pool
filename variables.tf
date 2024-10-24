@@ -427,6 +427,15 @@ variable "domain_certificate_arn" {
 }
 
 #
+# default_ui_customization
+#
+variable "default_ui_customization_image_file" {
+  description = "Base64-encoded image file for UI customization to be applied to all clients."
+  type        = string
+  default     = null
+}
+
+#
 # aws_cognito_user_pool_client
 #
 variable "clients" {
