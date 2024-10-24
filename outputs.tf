@@ -62,6 +62,14 @@ output "domain_app_version" {
 }
 
 #
+# default_ui_customization
+#
+output "default_ui_customization_image" {
+  value       = aws_cognito_user_pool_ui_customization.default_ui_customization.image_file
+  description = "Base64-encoded image file used for the default UI customization"
+}
+
+#
 # aws_cognito_user_pool_client
 #
 output "client_ids" {
